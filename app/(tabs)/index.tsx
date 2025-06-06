@@ -1,27 +1,35 @@
-import { StyleSheet, Text, View } from "react-native";
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 
-export default function Index() {
+const HomeScreen: React.FC = () => {
   return (
-    <View style={styles.view}>
-      <Text>Home page</Text> 
+    <View style={styles.container}>
+      <Text style={styles.title}>Welcome Home!</Text>
+      <Text style={styles.subtitle}>Your authenticated content goes here</Text>
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
-  view: {
+  container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center"
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 20,
+    backgroundColor: '#fff',
   },
-  navButton: {
-    width: 100, 
-    height: 25, 
-    backgroundColor: "coral",
-    borderRadius: 8, 
-    textAlign: "center"
-  }
-})
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 10,
+  },
+  subtitle: {
+    fontSize: 16,
+    color: '#666',
+  },
+});
+
+export default HomeScreen;
 
 
 

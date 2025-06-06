@@ -1,27 +1,33 @@
-import FontAwesome from '@expo/vector-icons/FontAwesome';
-import SimpleLineIcons from '@expo/vector-icons/SimpleLineIcons';
-import { Tabs } from "expo-router";
+import { Ionicons } from '@expo/vector-icons';
+import { Tabs } from 'expo-router';
+import React from 'react';
 
 export default function TabsLayout() {
   return (
-    <Tabs screenOptions={{ tabBarActiveTintColor: "coral" }}> 
-      <Tabs.Screen 
-        name="index" 
-        options={{ 
-          title: "Home",
-          tabBarIcon: ({ color }) => (
-            <FontAwesome name="home" size={24} color={color} />
+    <Tabs
+      screenOptions={{
+        headerShown: true,
+        tabBarActiveTintColor: '#007AFF',
+      }}
+    >
+      <Tabs.Screen
+        name="index"
+        options={{
+          title: 'Home',
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="home" size={size} color={color} />
           ),
         }}
-       />
-      <Tabs.Screen 
-        name="login" 
-        options={{ 
-          title: "Login",
-          tabBarIcon: ({ color }) => (
-            <SimpleLineIcons name="login" size={24} color={color} />
+      />
+      <Tabs.Screen
+        name="settings"
+        options={{
+          title: 'Settings',
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="settings" size={size} color={color} />
           ),
-      }} />
+        }}
+      />
     </Tabs>
   );
 }

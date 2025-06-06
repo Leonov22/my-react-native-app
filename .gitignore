@@ -17,6 +17,13 @@ expo-env.d.ts
 *.p12
 *.key
 *.mobileprovision
+android/app/debug
+android/app/release
+
+# Firebase config files
+google-services.json
+android/app/google-services.json
+ios/GoogleService-Info.plist
 
 # Metro
 .metro-health-check*
@@ -31,9 +38,28 @@ yarn-error.*
 *.pem
 
 # local env files
-.env*.local
+.env
+.env.*
+!.env.example
 
 # typescript
 *.tsbuildinfo
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Temporary files
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Build files
+/build/
+/android/app/build/
+/ios/build/
 
 app-example
